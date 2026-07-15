@@ -1,0 +1,38 @@
+# 密钥文件（绝对不能上传）
+.env
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Remotion 渲染产物
+remotion-video/out/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# IDE / 编辑器
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 日志
+*.log
+
+# Playwright 临时文件
+.playwright-cli/
+
+# 编译产物
+dist/
+build/

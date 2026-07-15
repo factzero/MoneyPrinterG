@@ -1,0 +1,99 @@
+{
+  "repos": [
+    {
+      "rank": 1,
+      "name": "wonderwhy-er / DesktopCommanderMCP",
+      "owner": "wonderwhy-er",
+      "repo": "DesktopCommanderMCP",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+      "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+      "language": "TypeScript",
+      "stars": "8,234",
+      "forks": "1,002",
+      "weeklyStars": 1939,
+      "screenshot": "screenshots/01-desktop-commander.png"
+    },
+    {
+      "rank": 2,
+      "name": "abseil / abseil-cpp",
+      "owner": "abseil",
+      "repo": "abseil-cpp",
+      "url": "https://github.com/abseil/abseil-cpp",
+      "description": "Abseil Common Libraries (C++)",
+      "language": "C++",
+      "stars": "17,977",
+      "forks": "3,229",
+      "weeklyStars": 621,
+      "screenshot": "screenshots/02-abseil-cpp.png"
+    },
+    {
+      "rank": 3,
+      "name": "iOfficeAI / OfficeCLI",
+      "owner": "iOfficeAI",
+      "repo": "OfficeCLI",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "language": "C#",
+      "stars": "16,560",
+      "forks": "1,108",
+      "weeklyStars": 7596,
+      "screenshot": "screenshots/03-meetily.png"
+    },
+    {
+      "rank": 4,
+      "name": "stablyai / orca",
+      "owner": "stablyai",
+      "repo": "orca",
+      "url": "https://github.com/stablyai/orca",
+      "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+      "language": "TypeScript",
+      "stars": "18,936",
+      "forks": "1,486",
+      "weeklyStars": 5263,
+      "screenshot": "screenshots/04-cube-sandbox.png"
+    },
+    {
+      "rank": 5,
+      "name": "TencentCloud / CubeSandbox",
+      "owner": "TencentCloud",
+      "repo": "CubeSandbox",
+      "url": "https://github.com/TencentCloud/CubeSandbox",
+      "description": "Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.",
+      "language": "Rust",
+      "stars": "10,145",
+      "forks": "992",
+      "weeklyStars": 2367,
+      "screenshot": "screenshots/05-codex-plugin.png"
+    }
+  ],
+  "sceneFrames": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "subtitles": {
+    "intro": "哈喽大家好，我是墨白。墨白带你盘一盘本周GitHub上最火的开源项目！今天要聊的这几个，有的能帮你用AI自动操作电脑，有的能让你在手机上管理一群AI代理，还有的是腾讯开源的超轻量沙盒。是不是有点好奇了？别急，我们一个一个来。",
+    "intro-projects": "本期盘点包括：DesktopCommanderMCP，让Claude控制你的终端；Abseil-cpp，谷歌的C++库；OfficeCLI，AI代理的Office神器；Orca，一个能跑多个AI代理的开发环境；以及CubeSandbox，腾讯的轻量沙盒。好，我们直接开整。",
+    "project-1": "第一个，wonderwhy-er/DesktopCommanderMCP。名字有点长，简单说，这是一个MCP服务器，专门给Claude用的。装了它，Claude就能直接操作你的终端、搜索文件、编辑代码。想象一下，你告诉Claude“帮我修一下这个bug”，它自己打开终端，定位代码，改完保存。是不是有点像科幻片？现在它已经8千多星了，本周新增1900多星。适合想用AI自动化写代码、调试的开发者。上手很简单，一行命令就能装。但要注意，给了AI终端权限，安全风险得自己掂量。适合在本地测试环境用，别在服务器上乱试。",
+    "project-2": "第二个，abseil/abseil-cpp。这是谷歌开源的C++基础库，相当于C++界的瑞士军刀。里面什么都有：字符串处理、容器、算法、并发工具等等。1万7千多星，本周新增621星。适合所有写C++的开发者，尤其是写大型项目、需要高性能基础库的团队。上手？直接git clone，然后集成到你的CMake项目里。注意，它和标准库有些功能重叠，别重复造轮子，但也要小心版本冲突。",
+    "project-3": "第三个，iOfficeAI/OfficeCLI。这个厉害了，专为AI代理设计的Office套件。一个命令行工具，就能读写、编辑Word、Excel、PPT文件，而且不需要装Office。1万6千多星，本周新增7千5百多星！适合所有做文档自动化的开发者，比如生成报告、批量处理表格。上手？下载一个二进制文件，直接运行。注意，它目前只支持基础操作，复杂的排版、宏之类的可能不行。但胜在轻量和免费。",
+    "project-4": "第四个，stablyai/orca。名字很酷，它是AI代理的开发环境。你可以在桌面或手机上，同时运行和管理一群AI代理，每个代理都有自己的订阅。1万8千多星，本周新增5千2百多星。适合做AI应用开发、需要并行测试多个代理方案的人。上手？下载客户端，配好API密钥，就能开始玩。注意，它本身不提供AI模型，你得自己充订阅费。而且同时跑一堆代理，费用可不低。",
+    "project-5": "第五个，TencentCloud/CubeSandbox。腾讯开源的超轻量沙盒，专门给AI代理用的。它启动快、安全、资源占用小。1万星，本周新增2千3百多星。适合做AI代理安全隔离、代码执行沙箱的开发者。上手？有Rust和Docker两种方式。注意，它主要是为AI场景设计的，通用沙盒功能可能不够全。但胜在轻量和即时。",
+    "outro": "好，回顾一下：DesktopCommanderMCP让Claude控制你的电脑，Abseil-cpp是C++工具库，OfficeCLI是AI的Office神器，Orca是AI代理的IDE，CubeSandbox是轻量沙盒。你觉得哪个最实用？或者你本周在用哪个开源项目？评论区告诉我。 喜欢这种盘点的话，记得一键三连，关注我，每周带你盘一盘GitHub上的新鲜玩意儿。我们下期见！"
+  },
+  "subtitleTiming": {
+    "intro": [],
+    "intro-projects": [],
+    "project-1": [],
+    "project-2": [],
+    "project-3": [],
+    "project-4": [],
+    "project-5": [],
+    "outro": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "github-trending-video",
+  "version": "1.0.0",
+  "description": "GitHub 本周热点 Top5 短视频",
+  "scripts": {
+    "dev": "remotion studio",
+    "render": "remotion render GitHubTrending out/github_trending_weekly.mp4 --codec=h264 --crf=12 --pixel-format=yuv420p",
+    "audio": "python scripts/generate_audio_edge.py"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "@remotion/media-utils": "^4.0.489",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "music-metadata": "^11.13.0",
+    "typescript": "^5.3.0"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "source": "GitHub Trending",
+    "since": "weekly",
+    "language": "all",
+    "fetched_at": "2026-07-13T22:55:40.147292",
+    "count": 5
+  },
+  "repositories": [
+    {
+      "rank": 1,
+      "name": "wonderwhy-er / DesktopCommanderMCP",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+      "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+      "language": "TypeScript",
+      "stars": "8,154",
+      "forks": "995",
+      "weeklyStars": 1678
+    },
+    {
+      "rank": 2,
+      "name": "abseil / abseil-cpp",
+      "url": "https://github.com/abseil/abseil-cpp",
+      "description": "Abseil Common Libraries (C++)",
+      "language": "C++",
+      "stars": "17,957",
+      "forks": "3,217",
+      "weeklyStars": 600
+    },
+    {
+      "rank": 3,
+      "name": "Zackriya-Solutions / meetily",
+      "url": "https://github.com/Zackriya-Solutions/meetily",
+      "description": "Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai) is the #1 Self-hosted, Open-source Ai meeting note taker for macOS & Windows. Understand How to write meeting minutes",
+      "language": "Rust",
+      "stars": "23,940",
+      "forks": "2,511",
+      "weeklyStars": 7440
+    },
+    {
+      "rank": 4,
+      "name": "TencentCloud / CubeSandbox",
+      "url": "https://github.com/TencentCloud/CubeSandbox",
+      "description": "Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.",
+      "language": "Rust",
+      "stars": "9,926",
+      "forks": "974",
+      "weeklyStars": 2490
+    },
+    {
+      "rank": 5,
+      "name": "openai / codex-plugin-cc",
+      "url": "https://github.com/openai/codex-plugin-cc",
+      "description": "Use Codex from Claude Code to review code or delegate tasks.",
+      "language": "JavaScript",
+      "stars": "28,301",
+      "forks": "1,856",
+      "weeklyStars": 2803
+    }
+  ]
+}

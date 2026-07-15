@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "source": "GitHub Trending",
+    "since": "weekly",
+    "language": "all",
+    "fetched_at": "2026-07-14T23:42:56.367812",
+    "count": 5
+  },
+  "repositories": [
+    {
+      "rank": 1,
+      "name": "wonderwhy-er / DesktopCommanderMCP",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+      "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+      "language": "TypeScript",
+      "stars": "8,234",
+      "forks": "1,002",
+      "weeklyStars": 1939
+    },
+    {
+      "rank": 2,
+      "name": "abseil / abseil-cpp",
+      "url": "https://github.com/abseil/abseil-cpp",
+      "description": "Abseil Common Libraries (C++)",
+      "language": "C++",
+      "stars": "17,977",
+      "forks": "3,229",
+      "weeklyStars": 621
+    },
+    {
+      "rank": 3,
+      "name": "iOfficeAI / OfficeCLI",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+      "language": "C#",
+      "stars": "16,560",
+      "forks": "1,108",
+      "weeklyStars": 7596
+    },
+    {
+      "rank": 4,
+      "name": "stablyai / orca",
+      "url": "https://github.com/stablyai/orca",
+      "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+      "language": "TypeScript",
+      "stars": "18,936",
+      "forks": "1,486",
+      "weeklyStars": 5263
+    },
+    {
+      "rank": 5,
+      "name": "TencentCloud / CubeSandbox",
+      "url": "https://github.com/TencentCloud/CubeSandbox",
+      "description": "Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.",
+      "language": "Rust",
+      "stars": "10,145",
+      "forks": "992",
+      "weeklyStars": 2367
+    }
+  ]
+}
