@@ -35,13 +35,11 @@ export const GitHubTrendingVideo: React.FC = () => {
         <IntroTitle />
         <Audio src={staticFile(AUDIO_FILES[0])} />
       </Sequence>
-
       {/* 片头 - 项目概览 */}
       <Sequence from={getSceneStart(1)} durationInFrames={getSceneFrames(1)}>
         <IntroProjects />
         <Audio src={staticFile(AUDIO_FILES[1])} />
       </Sequence>
-
       {/* 5 个项目详情 + 音频 */}
       {repos.map((repo, i) => (
         <Sequence
@@ -53,13 +51,11 @@ export const GitHubTrendingVideo: React.FC = () => {
           <Audio src={staticFile(AUDIO_FILES[2 + i])} />
         </Sequence>
       ))}
-
       {/* 片尾 + 音频 */}
       <Sequence from={getSceneStart(7)} durationInFrames={getSceneFrames(7)}>
         <Outro />
         <Audio src={staticFile(AUDIO_FILES[7])} />
       </Sequence>
-
       {/* 全局进度条 */}
       <ProgressBar scenes={sceneNames} />
     </div>

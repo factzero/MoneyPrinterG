@@ -2,6 +2,7 @@ import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { COLORS, INTRO_PROJECTS_FRAMES, repos, SUBTITLES } from "./data";
 import { RepoPreview } from "./components/ProjectCard";
+import { BackgroundDots } from "./components/BackgroundDots";
 import { Subtitle } from "./components/Subtitle";
 
 /** 计算本周一 ~ 周日的日期范围 */
@@ -33,27 +34,7 @@ export const IntroProjects: React.FC = () => {
 
   return (
     <AbsoluteFill style={{ background: "#F8F9FC", overflow: "hidden" }}>
-      {/* 网格线背景 */}
-      <div
-        style={{
-          position: "absolute", inset: 0,
-          backgroundImage: `
-            linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px)
-          `,
-          backgroundSize: "48px 48px",
-        }}
-      />
-      <div
-        style={{
-          position: "absolute", inset: 0,
-          backgroundImage: `
-            linear-gradient(rgba(0,0,0,0.035) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,0,0,0.035) 1px, transparent 1px)
-          `,
-          backgroundSize: "192px 192px",
-        }}
-      />
+      <BackgroundDots />
 
       {/* 背景光晕 */}
       <div

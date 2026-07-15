@@ -4,7 +4,7 @@
   "description": "GitHub 本周热点 Top5 短视频",
   "scripts": {
     "dev": "remotion studio",
-    "render": "remotion render GitHubTrending out/github_trending_weekly.mp4 --codec=h264 --crf=12 --pixel-format=yuv420p",
+    "render": "remotion render GitHubTrending out/github_trending_weekly.mp4 --codec=h264 --crf=8 --pixel-format=yuv444p",
     "audio": "python scripts/generate_audio_edge.py"
   },
   "dependencies": {

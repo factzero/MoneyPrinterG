@@ -7,6 +7,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import { COLORS, OUTRO_FRAMES, repos, SUBTITLES } from "./data";
+import { BackgroundDots } from "./components/BackgroundDots";
 import { Subtitle } from "./components/Subtitle";
 
 export const Outro: React.FC = () => {
@@ -35,31 +36,26 @@ export const Outro: React.FC = () => {
         padding: "40px 36px",
       }}
     >
-      {/* 网格线背景 */}
+      <BackgroundDots />
+
+      {/* 卡片区域遮罩 — 用毛玻璃效果遮盖背景杂点 */}
       <div
         style={{
           position: "absolute",
-          inset: 0,
-          backgroundImage: `
-            linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px)
-          `,
-          backgroundSize: "48px 48px",
+          top: "22%",
+          left: "4%",
+          right: "4%",
+          bottom: "15%",
+          borderRadius: 28,
+          background: "rgba(255,255,255,0.75)",
+          backdropFilter: "blur(12px)",
+          opacity: listOpacity,
+          zIndex: 1,
         }}
       />
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: `
-            linear-gradient(rgba(0,0,0,0.035) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,0,0,0.035) 1px, transparent 1px)
-          `,
-          backgroundSize: "192px 192px",
-        }}
-      />
+
       {/* ====== 标题 ====== */}
-      <div style={{ textAlign: "center", marginBottom: 50, opacity: titleOpacity }}>
+      <div style={{ textAlign: "center", marginBottom: 50, opacity: titleOpacity, zIndex: 2, position: "relative" }}>
         <h1
           style={{
             fontSize: 52,
@@ -82,15 +78,17 @@ export const Outro: React.FC = () => {
           gap: 26,
           marginBottom: 60,
           width: "100%",
+          zIndex: 2,
+          position: "relative",
         }}
       >
         {repos.map((repo) => {
           const cardColors = [
-            { bg: "#EEF2FF", border: "#2563EB" },
-            { bg: "#FDF2F8", border: "#DB2777" },
-            { bg: "#ECFDF5", border: "#059669" },
-            { bg: "#FFF7ED", border: "#EA580C" },
-            { bg: "#F5F3FF", border: "#7C3AED" },
+            { bg: "#EEF2FF", border: "#2563EB", accent: "#1D4ED8" },
+            { bg: "#FDF2F8", border: "#DB2777", accent: "#BE185D" },
+            { bg: "#ECFDF5", border: "#059669", accent: "#047857" },
+            { bg: "#FFF7ED", border: "#EA580C", accent: "#C2410C" },
+            { bg: "#F5F3FF", border: "#7C3AED", accent: "#6D28D9" },
           ];
           const c = cardColors[(repo.rank - 1) % 5];
           return (
@@ -114,6 +112,7 @@ export const Outro: React.FC = () => {
                 fontWeight: 900,
                 fontSize: 34,
                 minWidth: 38,
+                textAlign: "center",
               }}
             >
               {repo.rank}
@@ -137,7 +136,7 @@ export const Outro: React.FC = () => {
       </div>
 
       {/* ====== 抖音 CTA ====== */}
-      <div style={{ textAlign: "center", opacity: ctaOpacity }}>
+      <div style={{ textAlign: "center", opacity: ctaOpacity, zIndex: 2, position: "relative" }}>
         <p
           style={{
             fontSize: 30,
@@ -198,6 +197,7 @@ export const Outro: React.FC = () => {
           fontSize: 18,
           color: COLORS.textMuted,
           opacity: brandOpacity,
+          zIndex: 2,
         }}
       >
         @墨白 · 每周盘点 GitHub 开源项目

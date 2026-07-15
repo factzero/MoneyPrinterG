@@ -7,6 +7,7 @@ import {
 } from "remotion";
 import { COLORS, PROJECT_FRAMES_LIST, SUBTITLES, type RepoData } from "./data";
 import { ProjectCard } from "./components/ProjectCard";
+import { BackgroundDots } from "./components/BackgroundDots";
 import { Subtitle } from "./components/Subtitle";
 
 export const ProjectScene: React.FC<{
@@ -35,29 +36,7 @@ export const ProjectScene: React.FC<{
         paddingBottom: 50,
       }}
     >
-      {/* 网格线背景 */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: `
-            linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px)
-          `,
-          backgroundSize: "48px 48px",
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: `
-            linear-gradient(rgba(0,0,0,0.035) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,0,0,0.035) 1px, transparent 1px)
-          `,
-          backgroundSize: "192px 192px",
-        }}
-      />
+      <BackgroundDots />
       {/* 顶部进度条 */}
       <div
         style={{
