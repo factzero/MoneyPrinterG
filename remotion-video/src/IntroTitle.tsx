@@ -24,12 +24,23 @@ interface Particle {
   x: number; y: number; size: number; speed: number; phase: number;
 }
 
-const PARTICLES: Particle[] = Array.from({ length: 45 }, () => ({
-  x: Math.random() * 100,
-  y: Math.random() * 100,
-  size: 2.5 + Math.random() * 6,
-  speed: 0.3 + Math.random() * 1.2,
-  phase: Math.random() * Math.PI * 2,
+// 确定性伪随机（mulberry32），确保每帧粒子位置一致，不会跳跃
+function seededRandom(seed: number): () => number {
+  let s = seed | 0;
+  return () => {
+    s = (s + 0x6d2b79f5) | 0;
+    let t = Math.imul(s ^ (s >>> 15), 1 | s);
+    t ^= t + Math.imul(t ^ (t >>> 7), 61 | t);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+const rand = seededRandom(42);
+const PARTICLES: Particle[] = Array.from({ length: 20 }, () => ({
+  x: rand() * 100,
+  y: rand() * 100,
+  size: 2.5 + rand() * 6,
+  speed: 0.3 + rand() * 1.2,
+  phase: rand() * Math.PI * 2,
 }));
 
 // ---- 浮动几何光团 ----
@@ -57,18 +68,21 @@ export const IntroTitle: React.FC = () => {
   const { fps, width, height } = useVideoConfig();
   const totalFrames = INTRO_TITLE_FRAMES;
 
+  // ---- 归一化时间（秒），保证预览与渲染运动速度一致 ----
+  const t = frame / fps;
+
   // ---- 整体淡入（玻璃破碎之后） ----
   const globalOpacity = interpolate(frame, [38, 48], [0, 1], { extrapolateRight: "clamp" });
 
   // ---- 背景呼吸 ----
-  const bgBreath = 1 + Math.sin(frame * 0.018) * 0.04;
+  const bgBreath = 1 + Math.sin(t * 0.12) * 0.04;
 
   // ---- 中心光晕 ----
   const glowOpacity = interpolate(
     frame, [35, totalFrames * 0.35, totalFrames * 0.7, totalFrames],
     [0, 0.50, 0.35, 0.06]
   );
-  const glowScale = 0.82 + Math.sin(frame * 0.015) * 0.18;
+  const glowScale = 0.82 + Math.sin(t * 0.10) * 0.18;
 
   // ---- 光环旋转 ----
   const ringGroupRotate = interpolate(frame, [35, totalFrames], [0, 55]);
@@ -153,7 +167,7 @@ export const IntroTitle: React.FC = () => {
             width: orb.r * 2,
             height: orb.r * 2,
             borderRadius: "50%",
-            transform: `translate(-50%, -50%) translate(${Math.sin(frame * orb.speedX) * 18}px, ${Math.cos(frame * orb.speedY) * 14}px)`,
+            transform: `translate(-50%, -50%) translate(${Math.sin(t * orb.speedX * 5) * 18}px, ${Math.cos(t * orb.speedY * 5) * 14}px)`,
             background: `radial-gradient(circle, ${orb.color} 0%, transparent 65%)`,
             opacity: globalOpacity,
           }}
@@ -205,8 +219,9 @@ export const IntroTitle: React.FC = () => {
 
       {/* ============ 粒子星点 ============ */}
       {PARTICLES.map((p, i) => {
-        const flicker = 0.35 + 0.65 * Math.abs(Math.sin(frame * p.speed * 0.06 + p.phase));
-        const pY = p.y + Math.sin(frame * 0.02 + p.phase) * 2.5;
+        // 粒子闪烁 + 漂移
+        const flicker = 0.35 + 0.65 * Math.abs(Math.sin(t * p.speed * 0.18 + p.phase));
+        const pY = p.y + Math.sin(t * 0.14 + p.phase) * 5;
         const color = i % 4 === 0
           ? COLORS.accent3
           : i % 4 === 1
