@@ -2,6 +2,9 @@ import React from "react";
 import { interpolate, useCurrentFrame } from "remotion";
 import type { SubtitleSegment } from "../data";
 
+// 字幕淡入淡出帧数（更长 → 更平滑）
+const FADE_FRAMES = 12;
+
 export const Subtitle: React.FC<{
   segments: SubtitleSegment[];
 }> = ({ segments }) => {
@@ -16,16 +19,20 @@ export const Subtitle: React.FC<{
     return null;
   }
 
+  // 检测文本长度 → 自适应字体大小
+  const textLen = currentSeg.text.length;
+  const fontSize = textLen > 25 ? 26 : textLen > 18 ? 28 : 30;
+
   // 渐入渐出
   const fadeIn = interpolate(
     frame,
-    [currentSeg.startFrame, currentSeg.startFrame + 8],
+    [currentSeg.startFrame, currentSeg.startFrame + FADE_FRAMES],
     [0, 1],
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
   );
   const fadeOut = interpolate(
     frame,
-    [currentSeg.endFrame - 8, currentSeg.endFrame],
+    [currentSeg.endFrame - FADE_FRAMES, currentSeg.endFrame],
     [1, 0],
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
   );
@@ -36,8 +43,8 @@ export const Subtitle: React.FC<{
       style={{
         position: "absolute",
         bottom: 140,
-        left: 24,
-        right: 24,
+        left: 30,
+        right: 30,
         display: "flex",
         justifyContent: "center",
         zIndex: 100,
@@ -47,15 +54,21 @@ export const Subtitle: React.FC<{
     >
       <span
         style={{
-          display: "inline",
+          display: "block",
           color: "#000000",
-          fontSize: 30,
+          fontSize,
           fontWeight: 600,
-          lineHeight: 1.45,
+          lineHeight: 1.55,
           textAlign: "center",
           letterSpacing: "0.02em",
-          maxWidth: "92%",
-          textShadow: "0 1px 4px rgba(255,255,255,0.6), 0 1px 2px rgba(255,255,255,0.4)",
+          maxWidth: "88%",
+          wordBreak: "keep-all",
+          overflowWrap: "break-word",
+          textShadow: [
+            "0 1px 4px rgba(255,255,255,0.7)",
+            "0 1px 2px rgba(255,255,255,0.5)",
+            "0 0 8px rgba(255,255,255,0.4)",
+          ].join(", "),
         }}
       >
         {currentSeg.text}

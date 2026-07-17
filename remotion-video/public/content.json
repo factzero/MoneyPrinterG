@@ -2,15 +2,15 @@
   "repos": [
     {
       "rank": 1,
-      "name": "wonderwhy-er / DesktopCommanderMCP",
-      "owner": "wonderwhy-er",
-      "repo": "DesktopCommanderMCP",
-      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
-      "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
-      "language": "TypeScript",
-      "stars": "8,234",
-      "forks": "1,002",
-      "weeklyStars": 1939,
+      "name": "Nutlope / hallmark",
+      "owner": "Nutlope",
+      "repo": "hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "stars": "11,584",
+      "forks": "575",
+      "weeklyStars": 6573,
       "screenshot": "screenshots/01-desktop-commander.png"
     },
     {
@@ -21,79 +21,327 @@
       "url": "https://github.com/abseil/abseil-cpp",
       "description": "Abseil Common Libraries (C++)",
       "language": "C++",
-      "stars": "17,977",
-      "forks": "3,229",
-      "weeklyStars": 621,
+      "stars": "17,955",
+      "forks": "3,141",
+      "weeklyStars": 678,
       "screenshot": "screenshots/02-abseil-cpp.png"
     },
     {
       "rank": 3,
-      "name": "iOfficeAI / OfficeCLI",
-      "owner": "iOfficeAI",
-      "repo": "OfficeCLI",
-      "url": "https://github.com/iOfficeAI/OfficeCLI",
-      "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
-      "language": "C#",
-      "stars": "16,560",
-      "forks": "1,108",
-      "weeklyStars": 7596,
+      "name": "google-labs-code / stitch-skills",
+      "owner": "google-labs-code",
+      "repo": "stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "language": "TypeScript",
+      "stars": "7,582",
+      "forks": "892",
+      "weeklyStars": 1090,
       "screenshot": "screenshots/03-meetily.png"
     },
     {
       "rank": 4,
-      "name": "stablyai / orca",
-      "owner": "stablyai",
-      "repo": "orca",
-      "url": "https://github.com/stablyai/orca",
-      "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
-      "language": "TypeScript",
-      "stars": "18,936",
-      "forks": "1,486",
-      "weeklyStars": 5263,
+      "name": "HKUDS / Vibe-Trading",
+      "owner": "HKUDS",
+      "repo": "Vibe-Trading",
+      "url": "https://github.com/HKUDS/Vibe-Trading",
+      "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+      "language": "Python",
+      "stars": "24,492",
+      "forks": "4,055",
+      "weeklyStars": 5407,
       "screenshot": "screenshots/04-cube-sandbox.png"
     },
     {
       "rank": 5,
-      "name": "TencentCloud / CubeSandbox",
-      "owner": "TencentCloud",
-      "repo": "CubeSandbox",
-      "url": "https://github.com/TencentCloud/CubeSandbox",
-      "description": "Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.",
-      "language": "Rust",
-      "stars": "10,145",
-      "forks": "992",
-      "weeklyStars": 2367,
+      "name": "wonderwhy-er / DesktopCommanderMCP",
+      "owner": "wonderwhy-er",
+      "repo": "DesktopCommanderMCP",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+      "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+      "language": "TypeScript",
+      "stars": "8,427",
+      "forks": "934",
+      "weeklyStars": 1991,
       "screenshot": "screenshots/05-codex-plugin.png"
     }
   ],
   "sceneFrames": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0
+    659,
+    638,
+    1321,
+    1081,
+    1098,
+    854,
+    744,
+    796
   ],
   "subtitles": {
-    "intro": "哈喽大家好，我是墨白。墨白带你盘一盘本周GitHub上最火的开源项目！今天要聊的这几个，有的能帮你用AI自动操作电脑，有的能让你在手机上管理一群AI代理，还有的是腾讯开源的超轻量沙盒。是不是有点好奇了？别急，我们一个一个来。",
-    "intro-projects": "本期盘点包括：DesktopCommanderMCP，让Claude控制你的终端；Abseil-cpp，谷歌的C++库；OfficeCLI，AI代理的Office神器；Orca，一个能跑多个AI代理的开发环境；以及CubeSandbox，腾讯的轻量沙盒。好，我们直接开整。",
-    "project-1": "第一个，wonderwhy-er/DesktopCommanderMCP。名字有点长，简单说，这是一个MCP服务器，专门给Claude用的。装了它，Claude就能直接操作你的终端、搜索文件、编辑代码。想象一下，你告诉Claude“帮我修一下这个bug”，它自己打开终端，定位代码，改完保存。是不是有点像科幻片？现在它已经8千多星了，本周新增1900多星。适合想用AI自动化写代码、调试的开发者。上手很简单，一行命令就能装。但要注意，给了AI终端权限，安全风险得自己掂量。适合在本地测试环境用，别在服务器上乱试。",
-    "project-2": "第二个，abseil/abseil-cpp。这是谷歌开源的C++基础库，相当于C++界的瑞士军刀。里面什么都有：字符串处理、容器、算法、并发工具等等。1万7千多星，本周新增621星。适合所有写C++的开发者，尤其是写大型项目、需要高性能基础库的团队。上手？直接git clone，然后集成到你的CMake项目里。注意，它和标准库有些功能重叠，别重复造轮子，但也要小心版本冲突。",
-    "project-3": "第三个，iOfficeAI/OfficeCLI。这个厉害了，专为AI代理设计的Office套件。一个命令行工具，就能读写、编辑Word、Excel、PPT文件，而且不需要装Office。1万6千多星，本周新增7千5百多星！适合所有做文档自动化的开发者，比如生成报告、批量处理表格。上手？下载一个二进制文件，直接运行。注意，它目前只支持基础操作，复杂的排版、宏之类的可能不行。但胜在轻量和免费。",
-    "project-4": "第四个，stablyai/orca。名字很酷，它是AI代理的开发环境。你可以在桌面或手机上，同时运行和管理一群AI代理，每个代理都有自己的订阅。1万8千多星，本周新增5千2百多星。适合做AI应用开发、需要并行测试多个代理方案的人。上手？下载客户端，配好API密钥，就能开始玩。注意，它本身不提供AI模型，你得自己充订阅费。而且同时跑一堆代理，费用可不低。",
-    "project-5": "第五个，TencentCloud/CubeSandbox。腾讯开源的超轻量沙盒，专门给AI代理用的。它启动快、安全、资源占用小。1万星，本周新增2千3百多星。适合做AI代理安全隔离、代码执行沙箱的开发者。上手？有Rust和Docker两种方式。注意，它主要是为AI场景设计的，通用沙盒功能可能不够全。但胜在轻量和即时。",
-    "outro": "好，回顾一下：DesktopCommanderMCP让Claude控制你的电脑，Abseil-cpp是C++工具库，OfficeCLI是AI的Office神器，Orca是AI代理的IDE，CubeSandbox是轻量沙盒。你觉得哪个最实用？或者你本周在用哪个开源项目？评论区告诉我。 喜欢这种盘点的话，记得一键三连，关注我，每周带你盘一盘GitHub上的新鲜玩意儿。我们下期见！"
+    "intro": "哎，问你个问题啊，你是不是也被AI生成的代码“喂”过一堆花里胡哨但根本跑不通的玩意儿？别急，墨白带你盘一盘本周GitHub上五个硬核项目，专门治这种“AI病”。从防AI写垃圾代码，到让AI帮你炒股，再到让Claude直接控制你电脑桌面，全在这儿了。准备好了吗？走起！",
+    "intro-projects": "本期项目有：hallmark——专治AI写烂代码；abseil-cpp——谷歌内部C++库开源；stitch-skills——给AI代理加技能包；Vibe-Trading——个人AI炒股助手；DesktopCommanderMCP——让Claude直接操控电脑。墨白带你盘一盘，开始！",
+    "project-1": "第一个，hallmark。名字挺文艺，但功能很硬核。它是专门给Claude Code、Cursor、Codex这些AI编程工具用的“防AI-slop设计”。啥意思呢？就是AI经常生成一些看着高大上、实际运行就崩的代码，hallmark能帮你过滤掉这些垃圾，让输出更靠谱。本周新增六千五百多个Stars，火得不行。适合所有用AI写代码的程序员，尤其是被AI坑过的。上手很简单，直接装进你的AI工具里就行，一行配置命令搞定。注意啊，它不是万能药，主要针对AI生成代码的质量，你手写的代码它管不了。",
+    "project-2": "第二个，abseil-cpp。谷歌内部用了十年的C++公共库，现在开源了。Stars一万七千多，本周新增近七百。核心就是让你写C++代码时少踩坑，提供一堆现成的工具类，比如字符串处理、时间操作、内存管理。适合C++开发者，特别是做大型项目的。上手直接git clone下来，集成到你的CMake文件里。注意啊，这个库的API和标准库不太一样，需要一点学习成本，但绝对值得。",
+    "project-3": "第三个，stitch-skills。谷歌实验室出的，一个给AI代理用的“技能包”。它配合Stitch MCP服务器，让AI代理——比如Antigravity、Gemini CLI、Claude Code——能执行更复杂的任务。就像给AI装了个技能插件，让它不只是聊天，还能干活。本周新增一千多个Stars。适合AI开发者和搞自动化的人。上手方法：先装Stitch MCP，然后直接引用这些技能包。局限性是它现在只支持特定几种AI代理，不是所有AI都能用。",
+    "project-4": "第四个，Vibe-Trading。名字就很带感，个人AI炒股助手。Stars两万四千多，本周新增五千多。它用AI分析市场情绪，给你交易建议，但不是让你无脑跟单。适合对量化交易感兴趣、又不想写复杂策略的个人投资者。上手：Python环境，pip安装，然后配置你的API密钥就行。避坑提示：它只是辅助工具，别当神，股市有风险，AI也会错。",
+    "project-5": "第五个，DesktopCommanderMCP。这个最猛，让Claude直接控制你的电脑桌面。它是个MCP服务器，给Claude终端控制、文件搜索、代码编辑能力。Stars八千多，本周新增近两千。适合想用AI自动化本地操作的开发者。上手：npm安装，运行后Claude就能用。注意啊，给它权限时要小心，别让它乱删文件。",
+    "outro": "好，咱们回顾一下：hallmark治AI烂代码，abseil-cpp给C++加buff，stitch-skills给AI装技能包，Vibe-Trading帮你炒股，DesktopCommanderMCP让Claude操控桌面。五个项目，总有一个适合你。觉得有用？三连、收藏、关注走一波，墨白每周都来盘。最后问一句：你本周在用哪个GitHub开源项目？评论区告诉我。"
   },
   "subtitleTiming": {
-    "intro": [],
-    "intro-projects": [],
-    "project-1": [],
-    "project-2": [],
-    "project-3": [],
-    "project-4": [],
-    "project-5": [],
-    "outro": []
+    "intro": [
+      {
+        "start": 0.0,
+        "end": 7.106,
+        "text": "哎，问你个问题啊，你是不是也被AI生成的代码“喂”过一堆花里胡哨但根本跑不通的玩意儿？"
+      },
+      {
+        "start": 7.106,
+        "end": 13.221,
+        "text": "别急，墨白带你盘一盘本周GitHub上五个硬核项目，专门治这种“AI病”。"
+      },
+      {
+        "start": 13.221,
+        "end": 20.492,
+        "text": "从防AI写垃圾代码，到让AI帮你炒股，再到让Claude直接控制你电脑桌面，全在这儿了。"
+      },
+      {
+        "start": 20.492,
+        "end": 21.98,
+        "text": "准备好了吗？走起！"
+      }
+    ],
+    "intro-projects": [
+      {
+        "start": 0.0,
+        "end": 19.62,
+        "text": "本期项目有：hallmark——专治AI写烂代码；abseil-cpp——谷歌内部C库开源；stitch-skills——给AI代理加技能包；Vibe-Trading——个人AI炒股助手；DesktopCommanderMCP——让Claude直接操控电脑。"
+      },
+      {
+        "start": 19.62,
+        "end": 21.293,
+        "text": "墨白带你盘一盘，开始！"
+      }
+    ],
+    "project-1": [
+      {
+        "start": 0.0,
+        "end": 2.337,
+        "text": "第一个，hallmark。"
+      },
+      {
+        "start": 2.337,
+        "end": 4.674,
+        "text": "名字挺文艺，但功能很硬核。"
+      },
+      {
+        "start": 4.674,
+        "end": 13.841,
+        "text": "它是专门给ClaudeCode、Cursor、Codex这些AI编程工具用的“防AI-slop设计”。"
+      },
+      {
+        "start": 13.841,
+        "end": 24.087,
+        "text": "啥意思呢？就是AI经常生成一些看着高大上、实际运行就崩的代码，hallmark能帮你过滤掉这些垃圾，让输出更靠谱。"
+      },
+      {
+        "start": 24.087,
+        "end": 27.861,
+        "text": "本周新增六千五百多个Stars，火得不行。"
+      },
+      {
+        "start": 27.861,
+        "end": 32.355,
+        "text": "适合所有用AI写代码的程序员，尤其是被AI坑过的。"
+      },
+      {
+        "start": 32.355,
+        "end": 37.568,
+        "text": "上手很简单，直接装进你的AI工具里就行，一行配置命令搞定。"
+      },
+      {
+        "start": 37.568,
+        "end": 44.039,
+        "text": "注意啊，它不是万能药，主要针对AI生成代码的质量，你手写的代码它管不了。"
+      }
+    ],
+    "project-2": [
+      {
+        "start": 0.0,
+        "end": 3.02,
+        "text": "第二个，abseil-cpp。"
+      },
+      {
+        "start": 3.02,
+        "end": 7.046,
+        "text": "谷歌内部用了十年的C公共库，现在开源了。"
+      },
+      {
+        "start": 7.046,
+        "end": 10.871,
+        "text": "Stars一万七千多，本周新增近七百。"
+      },
+      {
+        "start": 10.871,
+        "end": 19.729,
+        "text": "核心就是让你写C代码时少踩坑，提供一堆现成的工具类，比如字符串处理、时间操作、内存管理。"
+      },
+      {
+        "start": 19.729,
+        "end": 23.151,
+        "text": "适合C开发者，特别是做大型项目的。"
+      },
+      {
+        "start": 23.151,
+        "end": 28.989,
+        "text": "上手直接gitclone下来，集成到你的CMake文件里。"
+      },
+      {
+        "start": 28.989,
+        "end": 36.035,
+        "text": "注意啊，这个库的API和标准库不太一样，需要一点学习成本，但绝对值得。"
+      }
+    ],
+    "project-3": [
+      {
+        "start": 0.0,
+        "end": 2.956,
+        "text": "第三个，stitch-skills。"
+      },
+      {
+        "start": 2.956,
+        "end": 6.734,
+        "text": "谷歌实验室出的，一个给AI代理用的“技能包”。"
+      },
+      {
+        "start": 6.734,
+        "end": 18.066,
+        "text": "它配合StitchMCP服务器，让AI代理——比如Antigravity、GeminiCLI、ClaudeCode——能执行更复杂的任务。"
+      },
+      {
+        "start": 18.066,
+        "end": 22.336,
+        "text": "就像给AI装了个技能插件，让它不只是聊天，还能干活。"
+      },
+      {
+        "start": 22.336,
+        "end": 24.636,
+        "text": "本周新增一千多个Stars。"
+      },
+      {
+        "start": 24.636,
+        "end": 27.099,
+        "text": "适合AI开发者和搞自动化的人。"
+      },
+      {
+        "start": 27.099,
+        "end": 31.862,
+        "text": "上手方法：先装StitchMCP，然后直接引用这些技能包。"
+      },
+      {
+        "start": 31.862,
+        "end": 36.625,
+        "text": "局限性是它现在只支持特定几种AI代理，不是所有AI都能用。"
+      }
+    ],
+    "project-4": [
+      {
+        "start": 0.0,
+        "end": 2.899,
+        "text": "第四个，Vibe-Trading。"
+      },
+      {
+        "start": 2.899,
+        "end": 5.628,
+        "text": "名字就很带感，个人AI炒股助手。"
+      },
+      {
+        "start": 5.628,
+        "end": 8.868,
+        "text": "Stars两万四千多，本周新增五千多。"
+      },
+      {
+        "start": 8.868,
+        "end": 13.643,
+        "text": "它用AI分析市场情绪，给你交易建议，但不是让你无脑跟单。"
+      },
+      {
+        "start": 13.643,
+        "end": 18.077,
+        "text": "适合对量化交易感兴趣、又不想写复杂策略的个人投资者。"
+      },
+      {
+        "start": 18.077,
+        "end": 23.534,
+        "text": "上手：Python环境，pip安装，然后配置你的API密钥就行。"
+      },
+      {
+        "start": 23.534,
+        "end": 28.48,
+        "text": "避坑提示：它只是辅助工具，别当神，股市有风险，AI也会错。"
+      }
+    ],
+    "project-5": [
+      {
+        "start": 0.0,
+        "end": 3.747,
+        "text": "第五个，DesktopCommanderMCP。"
+      },
+      {
+        "start": 3.747,
+        "end": 7.338,
+        "text": "这个最猛，让Claude直接控制你的电脑桌面。"
+      },
+      {
+        "start": 7.338,
+        "end": 12.647,
+        "text": "它是个MCP服务器，给Claude终端控制、文件搜索、代码编辑能力。"
+      },
+      {
+        "start": 12.647,
+        "end": 15.301,
+        "text": "Stars八千多，本周新增近两千。"
+      },
+      {
+        "start": 15.301,
+        "end": 18.112,
+        "text": "适合想用AI自动化本地操作的开发者。"
+      },
+      {
+        "start": 18.112,
+        "end": 21.546,
+        "text": "上手：npm安装，运行后Claude就能用。"
+      },
+      {
+        "start": 21.546,
+        "end": 24.825,
+        "text": "注意啊，给它权限时要小心，别让它乱删文件。"
+      }
+    ],
+    "outro": [
+      {
+        "start": 0.0,
+        "end": 16.37,
+        "text": "好，咱们回顾一下：hallmark治AI烂代码，abseil-cpp给C加buff，stitch-skills给AI装技能包，Vibe-Trading帮你炒股，DesktopCommanderMCP让Claude操控桌面。"
+      },
+      {
+        "start": 16.37,
+        "end": 18.287,
+        "text": "五个项目，总有一个适合你。"
+      },
+      {
+        "start": 18.287,
+        "end": 21.974,
+        "text": "觉得有用？三连、收藏、关注走一波，墨白每周都来盘。"
+      },
+      {
+        "start": 21.974,
+        "end": 25.513,
+        "text": "最后问一句：你本周在用哪个GitHub开源项目？"
+      },
+      {
+        "start": 25.513,
+        "end": 26.546,
+        "text": "评论区告诉我。"
+      }
+    ]
   }
 }

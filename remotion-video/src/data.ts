@@ -45,14 +45,35 @@ export interface SubtitleSegment {
 
 const CHAR_PER_SEC = 3.15;
 
+/** 智能拆分长句：按句子结束标点（。！？）断行，保留完整语义 */
+function smartSentenceSplit(text: string, maxChars = 40): string[] {
+  // 按句号/感叹号/问号拆分，保留整句语义
+  const sentences = text
+    .split(/(?<=[。！？])/)
+    .map((s) => s.trim())
+    .filter((s) => s.length > 0);
+
+  // 超长句按逗号/分号再次拆分
+  const result: string[] = [];
+  for (const part of sentences) {
+    if (part.length <= maxChars) {
+      result.push(part);
+    } else {
+      const subParts = part
+        .split(/(?<=[，；：、])/)
+        .map((s) => s.trim())
+        .filter((s) => s.length > 0);
+      result.push(...subParts);
+    }
+  }
+  return result;
+}
+
 export function distributeSegments(
   rawText: string,
   totalFrames: number,
 ): SubtitleSegment[] {
-  const sentences = rawText
-    .split(/(?<=[。！？；：])/)
-    .map((s) => s.trim())
-    .filter((s) => s.length > 0);
+  const sentences = smartSentenceSplit(rawText);
 
   const totalChars = sentences.reduce((sum, s) => sum + s.length, 0);
   if (totalChars === 0) return [];

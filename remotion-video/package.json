@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "remotion studio",
     "render": "remotion render GitHubTrending out/github_trending_weekly.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p --concurrency=8",
+    "render-cover": "remotion still Cover out/github_trending_cover.png --image-format=png",
     "audio": "python scripts/generate_audio_edge.py"
   },
   "dependencies": {

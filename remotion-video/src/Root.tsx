@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Composition, continueRender, delayRender } from "remotion";
 import { GitHubTrendingVideo } from "./MainVideo";
+import { CoverImage } from "./CoverImage";
 import { FPS, TOTAL_FRAMES, initContent } from "./data";
 
 export const RemotionRoot: React.FC = () => {
@@ -25,6 +26,14 @@ export const RemotionRoot: React.FC = () => {
         fps={FPS}
         width={1080}
         height={1920}
+      />
+      <Composition
+        id="Cover"
+        component={CoverImage}
+        durationInFrames={1}
+        fps={1}
+        width={1080}
+        height={1440}
       />
     </>
   );
