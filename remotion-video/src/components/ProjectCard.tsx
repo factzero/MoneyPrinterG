@@ -1,6 +1,6 @@
 import React from "react";
 import { Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import { COLORS, type RepoData } from "../data";
+import { COLORS, SAFE_INSET_H, type RepoData } from "../data";
 import { AnimatedNumber } from "./Title";
 
 export const ProjectCard: React.FC<{
@@ -47,7 +47,7 @@ export const ProjectCard: React.FC<{
         width: "100%",
         display: "flex",
         flexDirection: "column",
-        padding: "0 24px",
+        padding: `0 ${SAFE_INSET_H}px`,
         boxSizing: "border-box",
       }}
     >

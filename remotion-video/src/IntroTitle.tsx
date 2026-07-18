@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
-import { COLORS, INTRO_TITLE_FRAMES, SUBTITLES } from "./data";
+import { COLORS, INTRO_TITLE_FRAMES, SAFE_INSET_H, SUBTITLES } from "./data";
 import { Subtitle } from "./components/Subtitle";
 import { GlassCover } from "./components/GlassCover";
 
@@ -254,7 +254,7 @@ export const IntroTitle: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          left: `${60 - bracketOffset}px`,
+          left: `${SAFE_INSET_H - bracketOffset}px`,
           top: `${cy}px`,
           transform: "translateY(-50%)",
           fontSize: 210,
@@ -272,7 +272,7 @@ export const IntroTitle: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          right: `${60 - bracketOffset}px`,
+          right: `${SAFE_INSET_H - bracketOffset}px`,
           top: `${cy}px`,
           transform: "translateY(-50%)",
           fontSize: 210,
@@ -429,7 +429,7 @@ export const IntroTitle: React.FC = () => {
       {/* ============ 底部品牌 ============ */}
       <div
         style={{
-          position: "absolute", bottom: 24, right: 32,
+          position: "absolute", bottom: 24, right: SAFE_INSET_H,
           fontSize: 16, fontWeight: 500,
           color: COLORS.textMuted,
           opacity: dateOpacity,

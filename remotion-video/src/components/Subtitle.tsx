@@ -1,6 +1,7 @@
 import React from "react";
 import { interpolate, useCurrentFrame } from "remotion";
 import type { SubtitleSegment } from "../data";
+import { SAFE_INSET_H } from "../data";
 
 // 字幕淡入淡出帧数（更长 → 更平滑）
 const FADE_FRAMES = 12;
@@ -43,8 +44,8 @@ export const Subtitle: React.FC<{
       style={{
         position: "absolute",
         bottom: 140,
-        left: 30,
-        right: 30,
+        left: SAFE_INSET_H,
+        right: SAFE_INSET_H,
         display: "flex",
         justifyContent: "center",
         zIndex: 100,

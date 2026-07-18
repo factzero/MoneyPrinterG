@@ -6,7 +6,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { COLORS, OUTRO_FRAMES, repos, SUBTITLES } from "./data";
+import { COLORS, OUTRO_FRAMES, SAFE_INSET_H, repos, SUBTITLES } from "./data";
 import { BackgroundDots } from "./components/BackgroundDots";
 import { Subtitle } from "./components/Subtitle";
 
@@ -33,7 +33,7 @@ export const Outro: React.FC = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        padding: "40px 36px",
+        padding: `40px ${SAFE_INSET_H}px`,
       }}
     >
       <BackgroundDots />

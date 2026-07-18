@@ -5,7 +5,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { COLORS, PROJECT_FRAMES_LIST, SUBTITLES, type RepoData } from "./data";
+import { COLORS, PROJECT_FRAMES_LIST, SAFE_INSET_H, SUBTITLES, type RepoData } from "./data";
 import { ProjectCard } from "./components/ProjectCard";
 import { BackgroundDots } from "./components/BackgroundDots";
 import { Subtitle } from "./components/Subtitle";
@@ -44,7 +44,7 @@ export const ProjectScene: React.FC<{
           top: 0,
           left: 0,
           right: 0,
-          padding: "24px 28px",
+          padding: `24px ${SAFE_INSET_H}px`,
           zIndex: 10,
         }}
       >

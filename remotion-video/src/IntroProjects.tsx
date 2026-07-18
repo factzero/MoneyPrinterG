@@ -1,6 +1,6 @@
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
-import { COLORS, INTRO_PROJECTS_FRAMES, repos, SUBTITLES } from "./data";
+import { COLORS, INTRO_PROJECTS_FRAMES, SAFE_INSET_H, repos, SUBTITLES } from "./data";
 import { RepoPreview } from "./components/ProjectCard";
 import { BackgroundDots } from "./components/BackgroundDots";
 import { Subtitle } from "./components/Subtitle";
@@ -54,7 +54,7 @@ export const IntroProjects: React.FC = () => {
           display: "flex", flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          paddingLeft: 40, paddingRight: 40,
+          paddingLeft: SAFE_INSET_H, paddingRight: SAFE_INSET_H,
           gap: 72,
         }}
       >

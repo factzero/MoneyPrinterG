@@ -35,6 +35,10 @@ export const COLORS = {
 
 export const FPS = 30;
 
+// 抖音安全区：iPhone 15 Pro 等全面屏手机会裁切 9:16 视频左右各约 12%
+// 1080 × 0.12 ≈ 130px，内容核心区域保持在 820px 以内
+export const SAFE_INSET_H = 130;
+
 // ====== 字幕工具函数 ======
 
 export interface SubtitleSegment {

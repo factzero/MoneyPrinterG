@@ -1,5 +1,5 @@
 import React from "react";
-import { repos, COLORS } from "./data";
+import { repos, COLORS, SAFE_INSET_H } from "./data";
 
 /** 计算本周一 ~ 周日的日期范围 */
 function getWeekRange(): string {
@@ -224,7 +224,7 @@ export const CoverImage: React.FC = () => {
         style={{
           position: "absolute",
           bottom: 18,
-          right: 28,
+          right: SAFE_INSET_H,
           fontSize: 15,
           fontWeight: 500,
           color: COLORS.textMuted,

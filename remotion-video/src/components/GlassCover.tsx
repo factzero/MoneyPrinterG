@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { interpolate, useCurrentFrame, useVideoConfig } from "remotion";
-import { COLORS, repos } from "../data";
+import { COLORS, SAFE_INSET_H, repos } from "../data";
 
 // ---- 日期工具 ----
 function getWeekRange(): string {
@@ -232,7 +232,7 @@ export const GlassCover: React.FC = () => {
 
       {/* 品牌 */}
       <div style={{
-        position: "absolute", bottom: 20, right: 32,
+        position: "absolute", bottom: 20, right: SAFE_INSET_H,
         fontSize: 16, fontWeight: 500, color: COLORS.textMuted,
         letterSpacing: "0.05em",
       }}>
